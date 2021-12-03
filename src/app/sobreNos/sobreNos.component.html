@@ -1,0 +1,20 @@
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Nome</th>
+      <th>Sobrenome</th>
+      <th>Email</th>
+      <th>Telefone</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of ListaUsuarios">
+      <td>{{ListaUsuarios.id}}</td>
+      <td>{{ListaUsuarios.nome}}</td>
+      <td>{{ListaUsuarios.sobrenome}}</td>
+      <td>{{ListaUsuarios.email}}</td>
+      <td>{{ListaUsuarios.telefone}}</td>
+    </tr>
+  </tbody>
+</table>

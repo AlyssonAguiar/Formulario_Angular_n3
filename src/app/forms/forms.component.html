@@ -1,0 +1,73 @@
+<mat-card>
+  <mat-card-title class="centralizar">Novidades</mat-card-title>
+  <mat-card-subtitle class="centralizar" style="padding-top: 0.5rem;">
+    Você que deseja estar por dentro 
+    <br>
+    de todas as nossas novidades
+  </mat-card-subtitle>
+</mat-card>
+
+<mat-card class="centralizar"> 
+  <form class="formulario" [formGroup]="formularioUsuarios">
+    <table class="example-full-width" cellspacing="0">
+      <tr>
+        <td>
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Primeiro nome</mat-label>
+            <input matInput id="nome" formControlName="primeiroNome" name="primeiroNome" placeholder="Ex.Pedro">
+            <mat-hint>digite o seu nome</mat-hint>
+          </mat-form-field>
+        </td>
+
+        <td>
+          <mat-form-field class="example-full-width" style="padding-left: 2rem;" appearance="outline">
+            <mat-label>Sorenome</mat-label>
+            <input matInput id="sobrenome" name="sobrenome" formControlName="sobrenome" placeholder="Ex. Santos da Silva">
+            <mat-hint>digite o seu sobrenome</mat-hint>
+          </mat-form-field>
+        </td>
+    </tr>
+  </table>
+
+    <!-- <p>
+      <mat-form-field  class="example-full-width" appearance="outline" style="padding-top: 1rem;">
+        <mat-label>Genero</mat-label>
+        <mat-select formControlName="genero">
+          <mat-option  name="masculino" value="masculino">Masculino</mat-option>
+          <mat-option  name="feminino"  value="feminino">Feminino</mat-option>
+        </mat-select>
+        <mat-hint>escolha seu gênero</mat-hint>
+      </mat-form-field>
+    </p> -->
+
+    <p>
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Email</mat-label>
+        <input type="email" matInput name="email" formControlName="email" placeholder="Ex. usuario@example.com">
+        <mat-icon matSuffix>email</mat-icon>
+        <mat-hint>digite o seu email</mat-hint>
+      </mat-form-field>
+    </p>
+
+    <mat-form-field  class="example-full-width" appearance="outline">
+      <mat-label> Telefone</mat-label>
+      <span matPrefix> +55 &nbsp;</span>
+      <input type="tel" matInput name="telefone" formControlName="telefone" placeholder="(DDD) 99999-9999">
+      <mat-hint>digite o seu email</mat-hint>
+      <mat-icon matSuffix>phone</mat-icon>
+    </mat-form-field>
+
+    <!-- <p class="opcaoBeta" style="margin-left: 7rem;">
+      <mat-label> Deseja participar da fase Beta de testes?</mat-label>
+      <div class="col-sm-4" *ngFor="let item of teste">
+        <label class="radio-inline">
+          <input type="radio"  [value]="item.teste" formControlName="teste" /> {{ teste.desc }}
+        </label>
+      </div>
+    </p> -->
+
+    <button mat-stroked-button type="submit" (click)="onSubmit()" color="primary">Cadastrar</button>
+
+  </form>
+
+</mat-card>
